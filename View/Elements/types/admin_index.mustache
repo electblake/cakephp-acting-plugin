@@ -1,0 +1,15 @@
+<table class="table table-hover">
+  <tr>
+    <th>Act Type</th>
+    <th class="table-end">Options</th>
+  </tr>
+  {{#types}}
+  <tr>
+    <td>{{ActType.name}}</td>
+    <td>
+      <a href="/admin/acting/acts/edit/id:{{ActType.id}}"><i class="icon-pencil"></i></a>
+      <a href="/admin/acting/acts/remove/id:{{ActType.id}}"><i class="icon-trash"></i></a>
+    </td>
+  </tr>
+  {{/types}}
+</table>

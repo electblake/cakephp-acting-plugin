@@ -12,5 +12,6 @@ class ActType extends AppModel {
  * @var string
  */
 	public $displayField = 'name';
-
+	
+	public $useTable = 'act_types';
 }
