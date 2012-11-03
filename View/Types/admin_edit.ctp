@@ -17,18 +17,17 @@
   'class' => 'span3',
   'options' => array(
     ''  => 'None',
-    'ref_id' => 'Referencing Object (ex. View Types)',
-    'type_id' => 'Type (ex. Bookmark Types)'
+    'ref_id' => 'Referencing Object (News Item, Article ID etc)',
+    'type_id' => 'Type (View, Bookmark, etc)'
     )
   )); ?>
-<?php echo $this->Form->input('frequency_duration', array(
+<?php echo $this->Form->input('frequency_three', array(
   'label' => 'For (Frequency Duration)',
   'class' => 'span3',
   )); ?>
-<legend>Finish Up</legend>
 <?php echo $this->Form->input('return_to', array(
   'type' => 'hidden',
   'name' => 'return_to',
   'value' => '/admin/acting/'.strtolower($pluralModel),
 )); ?>
-<?php echo $this->Form->end(array('label' => 'Add Acting '.$singleModel, 'class' => 'btn')); ?>
+<?php echo $this->Form->end(array('label' => 'Update Acting '.$singleModel, 'class' => 'btn')); ?>

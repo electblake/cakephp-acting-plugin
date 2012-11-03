@@ -1,14 +1,18 @@
 <table class="table table-hover">
   <tr>
     <th>Act Type</th>
+    <th>Limitations</th>
+    <th>Frequency</th>
     <th class="table-end">Options</th>
   </tr>
   {{#types}}
   <tr>
-    <td>{{ActType.name}}</td>
+    <td>{{Type.name}}</td>
+    <td>{{Type.displayUniqueTo}}</td>
+    <td>{{Type.frequency_duration}}</td>
     <td>
-      <a href="/admin/acting/acts/edit/id:{{ActType.id}}"><i class="icon-pencil"></i></a>
-      <a href="/admin/acting/acts/remove/id:{{ActType.id}}"><i class="icon-trash"></i></a>
+      <a href="/admin/acting/types/edit/id:{{Type.id}}"><i class="icon-pencil"></i></a>
+      <a href="/admin/acting/types/remove/id:{{Type.id}}"><i class="icon-trash"></i></a>
     </td>
   </tr>
   {{/types}}

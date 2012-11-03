@@ -18,15 +18,18 @@ class TypesController extends ActingAppController {
   
   var $components = array('Administer.Administer');
   public $name = 'Types';
-  public $uses = array('ActType');
+  public $uses = array('Acting.Type');
   
   public function admin_index() {
-    $this->set('types', $this->ActType->find('all'));
+    $this->set('types', $this->Type->find('all'));
   }
   
   public function admin_add() {
     $this->Administer->admin_add();
-    
+  }
+  
+  public function admin_edit() {
+    $this->Administer->admin_edit();
   }
   
 
