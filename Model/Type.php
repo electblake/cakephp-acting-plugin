@@ -4,7 +4,7 @@ App::uses('AppModel', 'Model');
  * ActionableType Model
  *
  */
-class ActType extends AppModel {
+class Type extends AppModel {
 
 /**
  * Display field

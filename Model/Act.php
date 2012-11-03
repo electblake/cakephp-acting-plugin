@@ -17,15 +17,17 @@ class Act extends AppModel {
  */
 	public $belongsTo = array(
 		'Type' => array(
-			'className' => 'ActType',
+			'className' => 'Acting.Type',
 			'foreignKey' => 'type_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		),
+		/*
 		'Stage' => array(
-		  'className' => 'ActStage',
+		  'className' => 'Acting.Stage',
 		  'foreignKey' => 'stage_id',
-		)
+		),
+		*/
 	);
 }
