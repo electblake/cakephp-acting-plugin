@@ -1,0 +1,15 @@
+<table class="table table-hover">
+  <tr>
+    <th>Stage Name</th>
+    <th class="table-end">Options</th>
+  </tr>
+  {{#stages}}
+  <tr>
+    <td>{{Stage.name}}</td>
+    <td>
+      <a href="/admin/acting/stages/edit/id:{{Stage.id}}"><i class="icon-pencil"></i></a>
+      <a href="/admin/acting/stages/remove/id:{{Stage.id}}"><i class="icon-trash"></i></a>
+    </td>
+  </tr>
+  {{/stages}}
+</table>
