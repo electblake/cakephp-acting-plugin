@@ -19,11 +19,22 @@ class ActingComponent extends Component {
     App::uses('CakeTime', 'Utility');
   }
   
-  public function getActs($ref_id = null, $full = false) {
+  public function stats($ref_id = null, $full = false) {
     
     // full populates all of the rows
-    if ($full) {
-    
+    if (!$full) {
+      $this->controller->ActAggregate->recursive = 2;
+      $this->controller->ActAggregate->find('all', array(
+        'fields' => array(
+          'SUM(count) as total',
+          'type_id',
+          'ref_id',
+        ),
+        'conditions' => array(
+          'ref_id' => $ref_id,
+        ),
+        'group' => array('type_id')
+      ));
     } else { // not full only populates stats
       
       

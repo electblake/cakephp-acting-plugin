@@ -5,11 +5,9 @@ App::uses('AppModel', 'Model');
  *
  * @property Type $Type
  */
-class Act extends AppModel {
+class ActStats extends AppModel {
 
-
-	//The Associations below have been created with all possible keys, those that are not needed can be removed
-
+  public $useTable = 'act_aggregates';
 /**
  * belongsTo associations
  *
@@ -17,17 +15,12 @@ class Act extends AppModel {
  */
 	public $belongsTo = array(
 		'Type' => array(
-			'className' => 'Acting.Type',
+			'className' => 'Acting.ActType',
 			'foreignKey' => 'type_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		),
-		/*
-		'Stage' => array(
-		  'className' => 'Acting.Stage',
-		  'foreignKey' => 'stage_id',
-		),
-		*/
 	);
+	
 }
