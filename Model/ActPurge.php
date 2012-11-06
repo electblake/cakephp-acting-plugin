@@ -6,7 +6,7 @@ App::uses('AppModel', 'Model');
  * @property Ref $Ref
  * @property Type $Type
  */
-class ActPurges extends AppModel {
+class ActPurge extends AppModel {
 
 /**
  * Use table
