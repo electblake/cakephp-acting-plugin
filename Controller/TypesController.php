@@ -17,11 +17,11 @@ App::uses('ActingAppController', 'Acting.Controller');
 class TypesController extends ActingAppController {
   
   var $components = array('Administer.Administer');
-  public $name = 'Types';
-  public $uses = array('Acting.Type');
+  public $name = 'ActTypes';
+  public $uses = array('Acting.ActType');
   
   public function admin_index() {
-    $this->set('types', $this->Type->find('all'));
+    $this->set('types', $this->ActType->find('all'));
   }
   
   public function admin_add() {
