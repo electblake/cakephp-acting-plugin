@@ -1,5 +1,5 @@
 <?php echo $this->element('menu/admin', array('active' => strtolower($pluralModel)), array('plugin' => 'Acting')); ?>
-<?php echo $this->Form->create('Type'); ?>
+<?php echo $this->Form->create('ActType'); ?>
 <?php echo $this->Form->input('name'); ?>
 <legend>Frequency Limitations</legend>
 <?php echo $this->Form->input('frequency_one', array(
@@ -29,6 +29,6 @@
 <?php echo $this->Form->input('return_to', array(
   'type' => 'hidden',
   'name' => 'return_to',
-  'value' => '/admin/acting/'.strtolower($pluralModel),
+  'value' => '/admin/acting/types/',
 )); ?>
 <?php echo $this->Form->end(array('label' => 'Add Acting '.$singleModel, 'class' => 'btn')); ?>
